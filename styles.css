@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "hanken";
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "hanken";
+  src: url("assets/fonts/static/HankenGrotesk-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "hanken";
+  src: url("assets/fonts/static/HankenGrotesk-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "hanken";
+  src: url("assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+:root {
+  /* Primary colors */
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-grey-blue: hsl(224, 30%, 27%);
+
+  --grean-teal-transparent: hsla(166, 100%, 37%, 0.2);
+  --light-red-transparent: hsla(0, 100%, 67%, 0.2);
+  --cobalt-blue-transparent: hsla(234, 85%, 45%, 0.2);
+  --orange-yellow-transparent: hsla(39, 100%, 56%, 0.2);
+
+  --border-radius: 25px;
+  font-family: hanken;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution {
+  padding: 1rem;
+  background: #111;
+  color: var(--light-lavender);
+  text-align: center;
+}
+
+.card-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: var(--border-radius);
+  justify-content: space-around;
+  padding: 2rem 3rem;
+  flex: 1;
+}
+
+.card-your-result {
+  color: var(--light-lavender);
+  padding-bottom: 1rem;
+}
+
+.card-result-score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  margin: 1.3rem;
+}
+
+.card-result-achieved-score {
+  color: white;
+  font-size: 3rem;
+}
+
+.card-result-max-score {
+  color: var(--light-lavender);
+  font-weight: bold;
+}
+
+.card-result-response {
+  color: var(--pale-blue);
+  margin: 0rem 1rem 0.5rem 1rem;
+}
+
+.card-result-statistic {
+  color: var(--light-lavender);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  flex: 1;
+  gap: 1rem;
+}
+
+.card-summary-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+}
+
+.card-summary-item:nth-of-type(1) {
+  color: var(--light-red);
+  background-color: var(--light-red-transparent);
+}
+
+.card-summary-item:nth-of-type(2) {
+  color: var(--orange-yellow);
+  background-color: var(--orange-yellow-transparent);
+}
+
+.card-summary-item:nth-of-type(3) {
+  color: var(--green-teal);
+  background-color: var(--grean-teal-transparent);
+}
+
+.card-summary-item:nth-of-type(4) {
+  color: var(--cobalt-blue);
+  background-color: var(--cobalt-blue-transparent);
+}
+
+.card-summary-item-name {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.card-summary-item-score {
+  font-size: 1rem;
+  font-weight: bold;
+  color: gray;
+}
+
+.score {
+  color: var(--dark-grey-blue);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 10px rgb(240, 225, 255);
+  border-radius: var(--border-radius);
+}
+
+.continue-button {
+  border: 0;
+  color: var(--pale-blue);
+  border-radius: var(--border-radius);
+  background-color: var(--dark-grey-blue);
+  text-align: center;
+  font-weight: 500;
+  padding: 1rem 5rem 1rem 5rem;
+  text-align: center;
+  align-self: center;
+}
+
+.continue-button:hover {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .card {
+    flex-direction: row;
+    width: clamp(600px, 60%, 750px);
+    align-self: center;
+  }
+}
